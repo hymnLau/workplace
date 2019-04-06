@@ -1,6 +1,6 @@
 {
   "name": "workplace",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "This is a space to test a few codes.",
   "main": "main.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/hymnLau/workplace.git"
   },
-  "author": "",
+  "author": "Hymn Lau",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hymnLau/workplace/issues"
