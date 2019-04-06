@@ -1,0 +1,23 @@
+{
+  "name": "workplace",
+  "version": "1.0.0",
+  "description": "This is a space to test a few codes.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hymnLau/workplace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hymnLau/workplace/issues"
+  },
+  "homepage": "https://github.com/hymnLau/workplace#readme",
+  "dependencies": {
+    "electron": "^4.1.4"
+  }
+}
