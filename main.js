@@ -5,6 +5,7 @@ const
     menu = require('./src/window/menu'),
     app = electron.app,
     Menu = electron.Menu,
+    ipc = electron.ipcMain,
     BrowserWindow = electron.BrowserWindow;
 
 let mainwindow;
@@ -23,7 +24,8 @@ const
         closable: true,
         alwaysOnTop: false,
         frame: true,
-        titleBarStyle: 'default'
+        titleBarStyle: 'default',
+        nodeIntegration: true
     };
 
 function createWindow() {
@@ -40,7 +42,7 @@ function createWindow() {
         mainwindow.show();
     });
 
-    // mainwindow.webContents.openDevTools();
+    mainwindow.webContents.openDevTools();
 
     mainwindow.on('closed', function(){
         mainwindow = null;
@@ -64,4 +66,15 @@ app.on('active', function(){
     if (mainwindow !== null) {
         createWindow();
     }
+});
+
+ipc.on('synchronous-message', function(event, arg){
+    console.log(arg);
+    event.returnValue = "I heard you!";
+});
+
+ipc.on('asynchronous-message', function(event, arg){
+    console.log(arg);
+    const message = arg + ', one giant leap for mankind.';
+    event.sender.send('asynchronous-reply', message);
 });
