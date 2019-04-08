@@ -2,7 +2,7 @@
   "name": "workplace",
   "version": "0.1.3",
   "description": "This is a space to test a few codes.",
-  "main": "main.js",
+  "main": "./app/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
